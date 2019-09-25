@@ -2,21 +2,142 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.main-wrap {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 3px 30px;
+  margin: 5%;
+  padding: 30px 32px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.fst-header{
+  margin: 0 0 14px;
+  font-size: 22px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sec-header{
+  font-size: 16px;
+  text-align: left;
+  color: #637181;
+  font-weight: 400;
+}
+
+.container {
+  float: left;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  width: 33%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
 }
 
-.App-link {
-  color: #09d3ac;
+.cnt-txt{
+  margin-left: 20px;
+  max-width: calc(100% - 25px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #8690A0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+}
+
+.active .checkmark{
+  border: 4px solid #1875F0;
+  transition: border .3s ease;
+}
+
+.active .cnt-txt{
+  font-weight: 500;
+  color: black;
+}
+
+.error{
+  color: red;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+  text-align: left
+}
+
+.hide{
+  display: none;
+}
+
+.okresy-wrap{
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  border: 3px solid transparent;
+  transition: border 1s ease;
+  padding: 5px;
+  margin-top: 10px;
+  animation-name: border;
+  animation-duration: 1.5s;
+}
+
+@keyframes border {
+  from {border: 3px solid green;}
+  to {border: 3px solid transparent;}
+}
+
+.okresy-wrap h3{
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.btn-pokracuj-wrap{
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-pokracuj{
+  background-image: linear-gradient(to left, #1875F0 0%, #3294fe 100%);
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.11);
+  padding: 14px 32px 13px;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+
+@media (max-width: 575px) {
+  .container{
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-wrap{
+    width: 50%;
+  }
 }
